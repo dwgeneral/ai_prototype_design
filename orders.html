@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="components/styles.css">
+    <style>
+        .order-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .order-image {
+            height: 120px;
+            background-size: cover;
+            background-position: center;
+        }
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .status-paid {
+            background: #e6f7ee;
+            color: #00a854;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-full overflow-y-auto">
+    <!-- 引入通用头部 -->
+    <div id="header-container"></div>
+    
+    <div class="p-4">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">我的订单</h1>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="order-card bg-white">
+                <div class="order-image" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-800">海景别墅</h3>
+                        <div class="status-badge status-paid">已支付</div>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-2">三亚·亚龙湾</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                        <span>11月6日 - 11月7日</span>
+                        <span>1晚</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¥1049</span>
+                        <button class="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">查看详情</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="order-card bg-white">
+                <div class="order-image" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                <div class="p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-semibold text-gray-800">沙滩小屋</h3>
+                        <div class="status-badge status-paid">已支付</div>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-2">厦门·鼓浪屿</p>
+                    <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                        <span>10月15日 - 10月17日</span>
+                        <span>2晚</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium text-gray-800">¥1398</span>
+                        <button class="px-4 py-1 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

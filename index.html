@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海边民宿预订 - 小程序原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .prototype-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .phone-frame {
+            width: 390px;
+            height: 844px;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            background: white;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .status-bar {
+            height: 44px;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            align-items: center;
+            font-size: 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+            color: white;
+        }
+        .nav-bar {
+            height: 60px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #9ca3af;
+            margin: 0 40px;
+        }
+        .nav-item.active {
+            color: #3b82f6;
+        }
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .screen-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .screen-content {
+            width: 100%;
+            height: calc(100% - 104px);
+            margin-top: 44px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-3xl font-bold text-center mb-8">海边民宿预订小程序 - 原型界面</h1>
+    
+    <div class="prototype-container">
+        <!-- 首页 -->
+        <div>
+            <div class="screen-title">首页</div>
+            <div class="phone-frame">
+                <div class="status-bar">
+                    <div>9:41</div>
+                    <div>
+                        <i class="fas fa-signal mr-1"></i>
+                        <i class="fas fa-wifi mr-1"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+                
+                <iframe src="home.html" frameborder="0" class="screen-content"></iframe>
+                
+                <div class="nav-bar">
+                    <div class="nav-item active">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>首页</span>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span>我的</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 详情页 -->
+        <div>
+            <div class="screen-title">民宿详情</div>
+            <div class="phone-frame">
+                <div class="status-bar">
+                    <div>9:41</div>
+                    <div>
+                        <i class="fas fa-signal mr-1"></i>
+                        <i class="fas fa-wifi mr-1"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+                
+                <iframe src="detail.html" frameborder="0" class="screen-content"></iframe>
+                
+                <div class="nav-bar">
+                    <div class="nav-item">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>首页</span>
+                    </div>
+                    <div class="nav-item active">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span>我的</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 预订页 -->
+        <div>
+            <div class="screen-title">预订确认</div>
+            <div class="phone-frame">
+                <div class="status-bar">
+                    <div>9:41</div>
+                    <div>
+                        <i class="fas fa-signal mr-1"></i>
+                        <i class="fas fa-wifi mr-1"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+                
+                <iframe src="booking.html" frameborder="0" class="screen-content"></iframe>
+                
+                <div class="nav-bar">
+                    <div class="nav-item">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>首页</span>
+                    </div>
+                    <div class="nav-item active">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span>我的</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 订单页 -->
+        <div>
+            <div class="screen-title">我的订单</div>
+            <div class="phone-frame">
+                <div class="status-bar">
+                    <div>9:41</div>
+                    <div>
+                        <i class="fas fa-signal mr-1"></i>
+                        <i class="fas fa-wifi mr-1"></i>
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                </div>
+                
+                <iframe src="orders.html" frameborder="0" class="screen-content"></iframe>
+                
+                <div class="nav-bar">
+                    <div class="nav-item">
+                        <i class="fas fa-home nav-icon"></i>
+                        <span>首页</span>
+                    </div>
+                    <div class="nav-item active">
+                        <i class="fas fa-user nav-icon"></i>
+                        <span>我的</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
